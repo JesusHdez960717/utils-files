@@ -13,19 +13,19 @@ import java.net.URI;
  *
  * @author Jesus Hernandez Barrios (jhernandezb96@gmail.com)
  */
-public class OpenerBrowser {
+public class Browser {
 
     private final URI uri;
 
-    public static OpenerBrowser from(URI uri) {
-        return new OpenerBrowser(uri);
+    public static Browser from(URI uri) {
+        return new Browser(uri);
     }
 
-    public static OpenerBrowser from(String f) throws Exception {
-        return new OpenerBrowser(new URI(f));
+    public static Browser from(String f) throws Exception {
+        return new Browser(new URI(f));
     }
 
-    public OpenerBrowser(URI uri) {
+    public Browser(URI uri) {
         this.uri = uri;
     }
 
@@ -33,7 +33,7 @@ public class OpenerBrowser {
         return uri;
     }
 
-    public void browser() throws Exception {
+    public void browse() throws Exception {
         if (!Desktop.isDesktopSupported()) {
             throw new NullPointerException("Desktop no soportado");
         }
