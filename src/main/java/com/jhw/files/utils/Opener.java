@@ -33,6 +33,12 @@ public class Opener {
     }
 
     public void open() throws Exception {
+        if (!Desktop.isDesktopSupported()) {
+            throw new NullPointerException("Desktop no soportado");
+        }
+        if (!Desktop.getDesktop().isSupported(Desktop.Action.OPEN)) {
+            throw new NullPointerException("Abrir la carpeta no soportado");
+        }
         Desktop.getDesktop().open(file);
     }
 }
