@@ -35,11 +35,15 @@ public class Browser {
 
     public void browse() throws Exception {
         if (!Desktop.isDesktopSupported()) {
-            throw new NullPointerException("Desktop no soportado");
+            throw new RuntimeException("Desktop no soportado");
         }
         if (!Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
-            throw new NullPointerException("Abrir el explorador no soportado");
+            throw new RuntimeException("Abrir el explorador no soportado");
         }
-        Desktop.getDesktop().browse(uri);
+        try {
+            Desktop.getDesktop().browse(uri);
+        } catch (Exception e) {
+            throw new RuntimeException("Error abriendo el explorador en la dirección: " + uri);
+        }
     }
 }
