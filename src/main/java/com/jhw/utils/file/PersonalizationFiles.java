@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.jhw.files.utils;
+package com.jhw.utils.file;
 
-import com.jhw.personalization.services.PersonalizationHandler;
+import com.jhw.module.util.personalization.services.PersonalizationHandler;
 
 /**
  *
