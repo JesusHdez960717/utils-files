@@ -44,7 +44,7 @@ public class Browser {
         return uri;
     }
 
-    public void browse() throws Exception {
+    public void browse() throws RuntimeException {
         if (!Desktop.isDesktopSupported()) {
             throw new RuntimeException("Desktop no soportado");
         }
