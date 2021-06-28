@@ -4,7 +4,7 @@ plugins {
 
 group = 'com.root101.utils'
 
-version = '2.0.0.SNAPSHOT.20210109'
+version = '3.0.0.SNAPSHOT.20210627'
 
 repositories {
     jcenter()
@@ -12,8 +12,8 @@ repositories {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.13'
-    
+    implementation group: 'commons-io', name: 'commons-io', version: '2.9.0'
+
     implementation project(':utils-core')
     implementation project(':module-util-personalization')    
 }

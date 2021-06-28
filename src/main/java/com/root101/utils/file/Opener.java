@@ -44,7 +44,7 @@ public class Opener {
         return file;
     }
 
-    public void open() throws Exception {
+    public void open() throws RuntimeException {
         if (!Desktop.isDesktopSupported()) {
             throw new RuntimeException("Desktop no soportado");
         }
